@@ -1,4 +1,4 @@
-class Record extends AbstractRecord {
+class Record{
   private Object valueObject=0; // Concretising
   public Record(Object val) { // Concretising
     valueObject=val;
@@ -9,7 +9,7 @@ class Record extends AbstractRecord {
   public Object value() {
     return valueObject;
   }
-  public Comparison compare(AbstractRecord another) {
+  public Comparison compare(Record another) {
     long k1=(long)key(), k2=(long)(another.key()); // The same ad-hoc arrangement
     boolean b1=k1<=k2, b2=k1>=k2; // All this should be evident
     if(b1 && b2) return Comparison.MATCHING;

@@ -22,9 +22,26 @@ class DictionaryApp {
       System.out.print("Enter element: ");
       nextValue = myScanner.nextDouble();
       d.put(new Record((Object)nextValue));
+      if(nextValue == -803871.287937){
+        d.remove(new Record((Object)nextValue));
+      }
     }
+
+    // for (int i = 0; i< count; i++) {
+    //   if(i%2 == 0){
+    //     Record tbr;
+    //     tbr =  
+    //     d.remove(tbr);
+    //   }
+    // }
+      // double nextValue = -803871.287937;
+      // d.remove(new Record((Object)nextValue));
+
     myScanner.close(); // Is this necessary? What does this do? Can you use this instance Scanner
                        // again?
     d.show();
+
+
+    
   }
 }

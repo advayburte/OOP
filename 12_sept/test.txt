@@ -1,1 +1,11 @@
+DOCUMENTATION
 
+1. mising abstract in front of class name generates an error - that the class does not override abstract function
+    missing abstract in front of function declarations generates error saying missing function declaration.
+    implies abstract exempts/prohibits us from defining functions
+
+2. Simply by removing "extends"
+
+3.  have to change the type accepted by the methods of MyDictionary to Record from AbstractRecord before running get/remove methods.
+
+4. procedure is to write a class similar to record, with the methods named the same, but their functionality changed to accomodate a different data type, for e.g., string
