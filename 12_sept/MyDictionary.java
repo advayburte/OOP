@@ -19,7 +19,7 @@ class MyDictionary {
 		count = 0;
 	}
 
-	public Record get(AbstractRecord keyRecord) { // Return the record with the given key
+	public Record get(Record keyRecord) { // Return the record with the given key
 		for (Record record : records) {
 			if (record.compare(keyRecord)==Comparison.MATCHING)
         // What happens if there are duplicate keys?
@@ -39,7 +39,7 @@ class MyDictionary {
 			System.out.println("Size" + size + " not enough for holding an extra element after " + count + " count");
 	}
 
-	public Record remove(AbstractRecord keyRecord) {
+	public Record remove(Record keyRecord) {
     // Remove the record with the given key. What happens if there are duplicate
 		//   keys?
 		Record removed = null;
@@ -89,9 +89,9 @@ class MyDictionary {
 			records[i].show(); // What does this method do? Where is it defined?
 			System.out.println();
 		}
-		for (int i = count; i < size; i++) { // What does this loop do? Why is it needed?
-			System.out.print(i + " :#\n");
-		}
+		// for (int i = count; i < size; i++) { // What does this loop do? Why is it needed?
+		// 	System.out.print(i + " :#\n");
+		// }
 		System.out.println("");
 	}
 }
