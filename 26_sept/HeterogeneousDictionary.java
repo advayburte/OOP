@@ -26,11 +26,13 @@ public class HeterogeneousDictionary {
 	}
 
 	public void put(Record record) { // Insert the given record into the dictionary, if possible (due to size)
-		if (size > count) {
-			records[count++] = record; // What would happen if we used ++count instead of count++? What changes do you
-										// need to make, to allow ++count to work? Which files need to be changed?
-		} else
-			System.out.println("Size" + size + " not enough for holding an extra element after " + count + " count");
+		int count = 0;
+		for (int i =0; i<count; i++) {
+			if(records[i] == null && count == 0){
+				records[i] = record;
+				count = 1;
+			}
+		} 
 	}
 
 	public Record remove(Object searchKey) {

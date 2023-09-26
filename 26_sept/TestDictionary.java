@@ -20,16 +20,12 @@ public class TestDictionary {
 		
 		for (int i=0; i<count; i++) {
 			Double f=Double.valueOf(Integer.MAX_VALUE*Math.random());
-				// Interger.MAX_VALUE is a BIIG number.
-				// This ensures that our small number of elements are all unique.
-				// Change it to something small, or to size itself, and see how many keys are equal.
-				// Double f=Double.valueOf(size*Math.random());
 			Long l=Long.valueOf(Math.round(f.doubleValue()));
-				// Both taken as non-primitive types, so that they fit into the Object hierarchy
 			Record rec = new Record(l,f);
-			dictionary.put(rec);
+			
 		}
 		System.out.print(dictionary);
+
 		
 		int[] greater = new int[count];
 		int[] smaller = new int[count];
@@ -50,6 +46,10 @@ public class TestDictionary {
 		for (int i = 0; i < count; i++) totalInversions += greater[i];
 		System.out.println("Total mean inversions: "+totalInversions/(count*2));
 			// Is this final number dependent on the size, count, or otherwise predictable? Or just random?
+
+		
+
+
 	}
 }
 // Test this in the shell with
